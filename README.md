@@ -13,7 +13,7 @@ Bom desafio!
 ## O Desafio
 
 Você deve construir uma API que recebe ingredientes como parâmetro de entrada em uma chamada GET e retorna uma lista de receitas.
-Utilize as APIs públicas da RecipePuppy (http://www.recipepuppy.com) e da Giphy (https://developers.giphy.com/docs/) para obter os dados necessários.
+Utilize as APIs públicas da RecipePuppy (http://www.recipepuppy.com/about/api/) e da Giphy (https://developers.giphy.com/docs/) para obter os dados necessários.
 
 A API deve receber como parâmetro um conjunto de ingredientes (máximo 3) e deve retornar os itens utilizados para realizar a busca; e uma lista de receitas.
 
@@ -39,13 +39,19 @@ A resposta dessa requisição deve seguir a seguinte estrutura:
 
 ```
 {
-	"keywords" : ["onion", "tomato"],
-	"recipes" : [
-		"title" : "Greek Omelet with Feta",
-		"ingredients" : ["eggs", "feta cheese", "garlic", "red onions", "spinach", "tomato", "water"],
-		"link":"http://www.kraftfoods.com/kf/recipes/greek-omelet-feta-104508.aspx",
-		"gif":"https://media.giphy.com/media/xBRhcST67lI2c/giphy.gif"
-	],
+	"keywords": ["onion", "tomato"],
+	"recipes": [{
+		"title": "Greek Omelet with Feta",
+		"ingredients": ["eggs", "feta cheese", "garlic", "red onions", "spinach", "tomato", "water"],
+		"link": "http://www.kraftfoods.com/kf/recipes/greek-omelet-feta-104508.aspx",
+		"gif": "https://media.giphy.com/media/xBRhcST67lI2c/giphy.gif"
+	   },{
+		"title": "Guacamole Dip Recipe",
+		"ingredients": ["avocado", "onions", "tomato"],
+		"link":"http://cookeatshare.com/recipes/guacamole-dip-2783",
+		"gif":"https://media.giphy.com/media/I3eVhMpz8hns4/giphy.gif"
+	   }
+	]
 }
 ```
 
@@ -86,5 +92,3 @@ A resposta dessa requisição deve seguir a seguinte estrutura:
 ### Controle de Qualidade
 - O código possui configuração de lint?
 - O código possui testes unitários?
-
-
