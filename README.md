@@ -28,11 +28,11 @@ Cada item lista de receitas deve possuir 4 atributos:
 
 A API possui apenas um endpoint, que deve respeitar a seguinte chamada:
 
-`http://{HOST}/recipies/?i={ingredient_1},{ingredient_2}`
+`http://{HOST}/recipes/?i={ingredient_1},{ingredient_2}`
 
 Exemplo:
 
-`http://127.0.0.1/recipies/?i=onion,tomato`
+`http://127.0.0.1/recipes/?i=onion,tomato`
 
 
 A resposta dessa requisição deve seguir a seguinte estrutura:
