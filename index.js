@@ -1,10 +1,12 @@
-const express = require('express');
+const cors = require('cors');
 const dotenv = require('dotenv').config();
+const express = require('express');
 const http = require('http');
-var cors = require('cors');
+
 const app = express();
-app.use(cors());
 const port = process.env.PORT || 3000;
+
+app.use(cors());
 
 function getRecipes(ingredients) {
 	return new Promise((resolve, reject) => {
