@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>deliverymuch-test</title>
+</head>
+<body>
+    <h1>deliverymuch-test</h1>
+    <h2>Request</h2>
+    <p id="request"></p>
+    <h2>Response</h2>
+    <pre id="response">
+        <img src="loading.gif" alt="Loading">
+    </pre>
+    <script type="text/javascript">
+        function shuffle(array) {
+        	var currentIndex = array.length, temporaryValue, randomIndex;
+        	while (0 !== currentIndex) {
+        		randomIndex = Math.floor(Math.random() * currentIndex);
+        		currentIndex -= 1;
+        		temporaryValue = array[currentIndex];
+        		array[currentIndex] = array[randomIndex];
+        		array[randomIndex] = temporaryValue;
+        	}
+        	return array;
+        }
+
+        function getRandomInt(max) {
+          return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        var arr = [
+        	'bacon',
+            'banana pepper',
+            'biscuit',
+            'black pepper',
+            'butter',
+            'caraway seed',
+            'cheddar cheese',
+            'cheese',
+            'cherry tomato',
+            'chicken broth',
+            'chicken',
+            'cottage cheese',
+            'crescent rolls',
+            'egg yolks',
+            'egg',
+            'feta cheese',
+            'flour',
+            'garlic',
+            'green chilies',
+            'green onion',
+            'green pepper',
+            'grits',
+            'ham',
+            'haricots verts',
+            'heavy cream',
+            'italian cheese blend',
+            'kosher salt',
+            'milk',
+            'monterey jack cheese',
+            'mozzarella cheese',
+            'mushrooms',
+            'mustard',
+            'nutmeg',
+            'olive oil',
+            'onions',
+            'parsley',
+            'pastry',
+            'peas',
+            'pepperoni',
+            'ricotta cheese',
+            'romano cheese',
+            'salsa',
+            'salt',
+            'sandwich rolls',
+            'sausage',
+            'shrimp',
+            'skim milk',
+            'spinach',
+            'tomato',
+            'water',
+        ];
+
+        shuffle(arr);
+
+        var pos = getRandomInt(arr.length - 3);
+        var i = arr.slice(pos, pos + 3).join(',');
+
+        const req = new XMLHttpRequest();
+        const url='http://localhost:3000/recipes?i=' + i;
+        document.getElementById('request').innerHTML = url;
+        req.open('GET', url);
+        req.send();
+
+        req.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById('response').innerHTML = JSON.stringify(JSON.parse(req.responseText), undefined, 2);
+            }
+        }
+    </script>
+</body>
+</html>

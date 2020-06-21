@@ -1,0 +1,17 @@
+{
+    "name": "deliverymuch-test",
+    "version": "1.0.0",
+    "description": "Delivery Much Tech Challenge",
+    "main": "index.js",
+    "author": "Willy Stadnick",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/willystadnick/deliverymuch-test.git"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1"
+    }
+}
