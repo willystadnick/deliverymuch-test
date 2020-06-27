@@ -6,7 +6,7 @@ Aqui você terá todas as informações para realizar o seu desafio.
 
 O tempo sugerido para conclusão do desafio é de três dias, mas não é uma regra. Estamos mais interessados em observar a qualidade da solução do que o tempo.
 
-Quando sua solução estiver pronta, envie um e-mail para `tech.challenge@deliverymuch.com.br` com o link do seu repositório no Github. Seu código será analisado pelo nosso time de engenheiros. Após a análise, enviaremos o feedback e as instruções dos próximos passos!
+Quando sua solução estiver pronta, envie um e-mail para `tech.challenge@anon.mail` com o link do seu repositório no Github. Seu código será analisado pelo nosso time de engenheiros. Após a análise, enviaremos o feedback e as instruções dos próximos passos!
 
 Bom desafio!
 
